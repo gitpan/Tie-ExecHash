@@ -1,10 +1,19 @@
 Changes
-Makefile.PL
+INSTALL
+LICENSE
 MANIFEST
+META.yml
+Makefile.PL
 README
+SIGNATURE
+dist.ini
+lib/Tie/ExecHash.pm
 t/Tie-ExecHash.t
 t/pod-coverage.t
-t/pod-spelling.t
-t/pod-test.t
-lib/Tie/ExecHash.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+t/pod.t
+t/release-kwalitee.t
+t/release-minimum-version.t
+t/release-no-tabs.t
+t/release-portability.t
+t/release-synopsis.t
+t/release-unused-vars.t

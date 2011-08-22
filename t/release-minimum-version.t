@@ -7,7 +7,10 @@ BEGIN {
   }
 }
 
+
 use Test::More;
-eval "use Test::Pod::Coverage 1.00";
-plan skip_all => "Test::Pod::Coverage 1.00 required for testing POD coverage" if $@;
-all_pod_coverage_ok();
+
+eval "use Test::MinimumVersion";
+plan skip_all => "Test::MinimumVersion required for testing minimum versions"
+  if $@;
+all_minimum_version_from_metayml_ok();

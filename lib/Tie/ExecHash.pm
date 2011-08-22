@@ -1,11 +1,13 @@
+# ABSTRACT: Give special powers to only some keys in a hash
 package Tie::ExecHash;
+{
+  $Tie::ExecHash::VERSION = '0.91';
+}
 use Tie::Hash;
-use base 'Tie::ExtraHash';
 use strict;
 use warnings;
-use vars qw/ $VERSION /;
 
-$VERSION = '0.90';
+BEGIN { our @ISA = qw( Tie::ExtraHash ); }
 
 sub STORE {
     if (    ref $_[2] eq 'ARRAY'
@@ -46,11 +48,17 @@ sub DELETE {
 
 
 1;
-__END__
+
+
+=pod
 
 =head1 NAME
 
-Tie::ExecHash - Give special powers only to some keys
+Tie::ExecHash - Give special powers to only some keys in a hash
+
+=head1 VERSION
+
+version 0.91
 
 =head1 SYNOPSIS
 
@@ -97,15 +105,17 @@ line client for the Volity project. L<http://www.volity.org/>
 
 =head1 AUTHOR
 
-Andy Turner, E<lt>turner@mikomi.orgE<gt>
+Becca <becca@referencethis.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005 by Andy Turner
+This software is copyright (c) 2011 by Rebecca Turner.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.6 or,
-at your option, any later version of Perl 5 you may have available.
-
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+
